@@ -1,0 +1,8 @@
+body {
+     font-family: "Public Sans", serif;
+}
+
+nav .invite-btn {
+    background: red;
+    /* padding: .1rem .1rem .1rem .1rem; */
+}
