@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body {
-     font-family: "Public Sans", serif;
+    font-family: "Public Sans", serif;
 }
 
-nav .invite-btn {
-    background: red;
-    /* padding: .1rem .1rem .1rem .1rem; */
+.invite-btn {
+   background:  linear-gradient(to left, hsl(192, 70%, 51%), hsl(136, 65%, 51%));
+}
+
+footer {
+ Background: hsl(233, 26%, 24%);
+}
+
+@media screen {
+    
 }
