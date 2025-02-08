@@ -5,14 +5,92 @@ body {
     font-family: "Public Sans", serif;
 }
 
-.invite-btn {
-   background:  linear-gradient(to left, hsl(192, 70%, 51%), hsl(136, 65%, 51%));
+button, .btn {
+   background: linear-gradient(to left, hsl(192, 70%, 51%), hsl(136, 65%, 51%));
+   
 }
+
+#icon-close {
+    display: none;
+}
+
+
+@media screen and (max-width:767px) {
+    #icon-hamburger {
+      display: block !important;
+      
+  }
+
+  .invite-btn {
+      display: none !important;
+   }
+
+  
+}
+
+
+@media screen and (max-width:375px) {
+      #icon-hamburger {
+        display: block !important;
+        
+    }
+
+    .invite-btn {
+        display: none !important;
+     }
+
+     nav {
+        background-color: greenyellow !important;
+     }
+
+    
+}
+
+
+@media screen and (min-width:375px) and (max-width:767px) {
+    #icon-hamburger {
+      display: block !important;
+      
+  }
+
+  .invite-btn {
+      display: none !important;
+   }
+
+   nav {
+      background-color: red !important;
+   }
+
+  
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .invite-btn {
+        display: block !important;
+     }
+
+     #icon-hamburger, #icon-close, #menuList {
+        display: none !important;
+        
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .invite-btn {
+        display: block !important;
+    }
+
+
+
+    #icon-hamburger, #icon-close, #menuList {
+        display: none !important;
+        
+    }
+}
+
 
 footer {
  Background: hsl(233, 26%, 24%);
 }
 
-@media screen {
-    
-}
+

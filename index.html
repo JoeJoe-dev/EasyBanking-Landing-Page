@@ -19,54 +19,60 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="overflow-x-hidden ">
-  <nav class="navbar flex flex-row justify-around pt-6 h-[5rem] bg-white relative">
-      <img src="images/logo.svg" alt="Easybank Logo"
-       class="ml-[7rem] w-[6.5rem] h-[1rem] mt-[.7rem]">
-
-      <div class="navMenu flex w-[30rem] justify-center 
-      ml-[4rem] pt-[.5rem]">
-        <ul class="w-[4.5rem]  text-center">Home</ul>
-        <ul class="w-[4.5rem]  text-center">About</ul>
-        <ul class="w-[4.5rem]  text-center">Contact</ul>
-        <ul class="w-[4.5rem]  text-center">Blog</ul>
-        <ul class="w-[4.5rem]  text-center">Careers</ul>
+<body class="overflow-x-hidden">
+    <nav class="navbar relative flex flex-row justify-between pt-6 h-[5rem] px-10 bg-white w-[100%] h-[100%]">
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
       </div>
 
-      <button class="invite-btn mr-[4rem] px-[1rem] mt-[.5rem] 
+      <div class="absolute flex top-[4rem] left-[-1rem] right-[0] h-[30rem] justify-center" id="menuList">
+        <ul class="rounded h-[14.5rem] w-[100%] mx-[3rem] mt-[2rem]  bg-white text-center gap-10" id="menuListUl">
+          <li class="mt-[1.4rem]">Home</li>
+          <li class="mt-[1rem]">About</li>
+          <li class="mt-[1rem]">Contact</li>
+          <li class="mt-[1rem]">Blog</li>
+          <li class="mt-[1rem]">Careers</li>
+        </ul>
+      </div>
+      
+
+      <div class="btn">
+        <button class="invite-btn mr-[-1rem] px-[1rem] mt-[-.4rem] 
       rounded-full h-[2rem] text-[.7rem] text-white">Request Invite</button>
+        <img src="images/icon-hamburger.svg" alt="" class="z-10 mt-[.4rem] h-[.8rem]" id="icon-hamburger" onclick="toggleMenu()"> 
+      <img src="images/icon-close.svg" alt="" class="z-30 mt-[.1rem]" id="icon-close" onclick="toggleMenu2()"> 
+      </div>
     </nav>
 
-  <header class="pl-[10.8rem] grid grid-cols-2 gap-10">
-    <div class="left-side mt-[5rem]">
-      <h1 class="text-6xl leading-[4.5rem] text-gray-500">Next generation <br> digital banking</h1>
+
+  <header class="text-center">
+    <div class="w-[50rem] h-[50rem] overflow-x-hidden mt-[-19rem] ml-[-8rem]">
+      <img src="images/bg-intro-desktop.svg" class="z-30 " alt="">
+      <img class="w-[22.6rem] mt-[-30.8rem] h-[29rem] ml-[8rem]" src="images/image-mockups.png" alt="">
+    </div>
+
+    <div class="mt-[-8rem] px-7">
+      <h1 class="text-[2.6rem] leading-[3.3rem] text-gray-500">Next generation digital banking</h1>
     
-    <p class="w-[25rem] mt-[1rem]">
-      Take your financial life online. Your Easybank account will be a one-stop-shopfor spending, saving, budgeting, investing, and much more.
+    <p class="mt-5">
+      Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
     </p>
     
-    <button class="invite-btn px-[1rem] 
-    rounded-full h-[2rem] text-white mt-[2rem] text-[.7rem]">Request Invite</button>
+    <button class="btn px-[2rem] 
+    rounded-full h-[2.5rem] text-white mt-[2rem] text-[1rem]">Request Invite</button>
     </div>
+  </header> 
+
+
+  <section class="text-center mt-[4rem] bg-slate-100 py-[5rem] px-[2rem]">
+    <h1 class="text-3xl text-gray-500 px-5">Why choose Easybank?</h1>
     
-    <div class="right-side mr-[-10rem]">
-      <img src="images/bg-intro-desktop.svg" class="z-30 mt-[-9.5rem]
-      w-[50rem] h-[40rem]" alt="">
-      <img class="mt-[-35.4rem] pt-[rem] ml-[7rem] w-[33rem] h-[40rem]" src="images/image-mockups.png" alt="">
-    </div>
-  </header>
-  
-  
-  
-  <section class="pl-[8.6rem] mt-[-8rem] bg-slate-100 py-[5rem]">
-    <h1 class="text-5xl text-gray-500">Why choose Easybank?</h1>
-    
-    <p class="mt-[1.5rem]">We leverage Open Banking to turn your bank account into your financial hub. <br>
+    <p class="mt-[1.5rem]">We leverage Open Banking to turn your bank account into your financial hub.
     Control your finances like never before.</p>
     
-    <div class="mt-[4rem] grid grid-cols-4 gap-2">
+    <div class="mt-[4rem] text-center ">
       <div>
-        <img src="images/icon-online.svg" alt="">
+        <div class=" flex justify-center"><img src="images/icon-online.svg" alt=""></div>
         <h2 class="mt-[2rem] text-2xl text-gray-700">Online Banking</h2>
         <p class="mt-[1rem] pe-[.7rem]">
           Our modern web and mobile applications allow you to keep track of your finances 
@@ -74,8 +80,8 @@
         </p>
       </div>
       
-      <div>
-        <img src="images/icon-budgeting.svg" alt="">
+      <div class="mt-[4rem] text-center">
+        <div class=" flex justify-center"><img src="images/icon-budgeting.svg" alt=""></div>
         <h2 class="mt-[2rem] text-2xl text-gray-700">Simple Budgeting</h2>
         <p class="mt-[1rem]">
            See exactly where your money goes each month. Receive notifications when you’re 
@@ -84,8 +90,8 @@
       </div>
       
       
-      <div>
-        <img src="images/icon-onboarding.svg" alt="">
+      <div class="mt-[4rem] text-center ">
+        <div class=" flex justify-center"><img src="images/icon-onboarding.svg" alt=""></div>
         <h2 class="mt-[2rem] text-2xl text-gray-700">Fast Onboarding</h2>
         <p class="mt-[1rem]">
           We don’t do branches. Open your account in minutes online and start taking control 
@@ -93,8 +99,8 @@
         </p>
       </div>
       
-      <div>
-        <img src="images/icon-api.svg" alt="">
+      <div class="mt-[4rem] text-center ">
+        <div class=" flex justify-center"><img src="images/icon-api.svg" alt=""></div>
         <h2 class="mt-[2rem] text-2xl text-gray-700">Open API</h2>
         <p class="mt-[1rem]">
           Manage your savings, investments, pension, and much more from one account. Tracking 
@@ -102,65 +108,66 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> 
   
-  <section class="mt-[5rem] pl-[9rem]">
-    <h1 class="text-[2.8rem] text-gray-500">
+  
+  <section class="bg-slate-100">
+    <h1 class="text-[1.5em] text-gray-500 text-center ">
       Latest Articles
     </h1>
     
-    <div class="grid grid-cols-4 gap-6 bg-slate-50 mt-[2rem]">
+    <div class="grid justify-center items-center gap-6 bg-slate-100 mt-[2rem]">
       <div class="bg-white">
-        <img src="images/image-currency.jpg" alt="" class="w-[20rem]">
-        <h4 class="mt-[1.5rem] pl-[.5rem]">
+        <div class="flex justify-center"><img src="images/image-currency.jpg" alt="" class="w-[rem]"></div>
+        <p class="text-[.8rem] mt-[1.5rem] pl-10">
         By Claire Robinson
         <h4>
-        <h2 class="mt-[2rem] text-xl pl-[.5rem] text-gray-700">
+        <h2 class="mt-[.5rem] text-[1rem] px-10 text-gray-700">
           Receive money in any currency with no fees
         </h2>
-        <p class="mt-[.5rem] ps-[.5rem] pe-[1.1rem] text-[.9rem]">
+        <p class="mt-[.5rem] px-10 text-[.8rem] text-gray-400">
           The world is getting smaller and we’re becoming more mobile. So why should you be 
            forced to only receive money in a single … 
         </p>
       </div>
       
-      <div class="bg-white">
-        <img src="images/image-restaurant.jpg" alt="" class="w-[20rem] h-[13rem]"/>
-        <h4 class="mt-[1.5rem] pl-[.5rem]">
+      <div class="bg-white mt-10">
+        <div class="flex justify-center"><img src="images/image-restaurant.jpg" alt="" class="w-[20rem] h-[13rem]"/></div>
+        <h4 class="text-[.8rem] mt-[1.5rem] px-10">
         By Wilson Hutton
         <h4>
-        <h2 class="mt-text-xl pl-[.5rem] mt-[2rem] text-gray-700">
+          <h2 class="mt-[.5rem] text-[1rem] px-10 text-gray-700">
           Treat yourself without worrying about money
         </h2>
-        <p class="mt-[.5rem] ps-[.5rem] pe-[1.1rem] text-[.9rem]">
+        <p class="mt-[.5rem] px-10 text-[.8rem] text-gray-400">
            Our simple budgeting feature allows you to separate out your spending and set 
           realistic limits each month. That means you …
         </p>
       </div>
       
-      <div class="bg-white">
-        <img src="images/image-plane.jpg" alt="" class="w-[20rem] h-[13rem]"/>
-        <h4 class="mt-[1.5rem] pl-[.5rem]">
+      <div class="bg-white mt-10">
+        <div class="flex justify-center"><img src="images/image-plane.jpg" alt="" class="w-[20rem] h-[13rem]"/></div>
+        <h4 class="text-[.8rem] mt-[1.5rem] px-10">
           By Wilson Hutton
         <h4>
-        <h2 class="mt-[2rem] text-gray-700 text-xl pl-[.5rem]">
+          <h2 class="mt-[.5rem] text-[1rem] px-10 text-gray-700">
          Take your Easybank card wherever you go
         </h2>
-        <p class="mt-[.8rem] ps-[.5rem] pe-[1.1rem] text-[.84rem]">
+        <p class="mt-[.5rem] px-10 text-[.8rem] text-gray-400">
           We want you to enjoy your travels. This is why we don’t charge any fees on purchases
           while you’re abroad. We’ll even show you …
         </p>
       </div>
       
-      <div class="bg-white">
-        <img src="images/image-confetti.jpg" alt="" class="w-[20rem] h-[13rem]"/>
-        <h4 class="mt-[1.5rem] pl-[.5rem]">
+      <div class="bg-white mt-10">
+        <div class="flex justify-center"><img src="images/image-confetti.jpg" alt="" class="w-[20rem] h-[13rem]"/></div>
+        <h4 class="text-[.8rem] mt-[1.5rem] px-10">
         By Claire Robinson
         <h4>
-        <h2 class="mt-[2rem] text-gray-700 text-xl pl-[.5rem]">
+        <h2 class="mt-[.5rem] text-[1rem] px-10 text-gray-700">
            Our invite-only Beta accounts are now live!
         </h2>
-        <p class="mt-[.87rem] ps-[.5rem] pe-[1.1rem] text-[.83rem]">
+        <p class="mt-[.5rem] px-10 text-[.8rem] text-gray-400">
          After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
           It’s easy to request an invite through the site ...
         </p>
@@ -169,7 +176,7 @@
   </section>
   
   
-  <footer class="grid grid-cols-4 text-white pl-[9rem] h-[12rem] pt-[3rem] mt-[5rem]">
+   <footer class="text-white pl-[9rem] h-[12rem] pt-[3rem] mt-[5rem]">
     <div class=" ">
     <img src="images/logo 1.svg" alt="" class="w-[8rem] h-[1rem]"/>
       
@@ -202,7 +209,40 @@
          </p>
       </div>
     
-  </footer>
+  </footer>  
 
+
+     <script>
+      let menuList = document.getElementById("menuList");
+      let iconHamburger = document.getElementById("icon-hamburger")
+      let iconClose = document.getElementById("icon-close");
+      let menuListUl = document.getElementById("menuListUl");
+      console.log(menuListUl);
+
+      menuList.style.display = "none"
+      
+      
+      function toggleMenu(){
+        if(menuList.style.display = "none") {
+          menuList.style.display = "block";
+          menuList.style.marginRight = "80px";
+          menuListUl.style.paddingTop = "3px";
+          iconHamburger.style.display = "none";
+          iconClose.style.display = "block";
+          console.log("checked");
+        } 
+      }
+
+      function toggleMenu2() {
+        if(menuList.style.display = "block")  {
+          menuList.style.display = "none";
+          iconClose.style.display = "none";
+          iconHamburger.style.display = "block";
+          console.log("checked out");
+        }
+      }
+
+      
+     </script>
 </body>
 </html>
