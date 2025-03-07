@@ -90,6 +90,10 @@ button {
     color: black;
   }
 
+  nav ul li a {
+    color: black;
+  }
+
   button {
     display: none;
   }
@@ -328,6 +332,10 @@ button {
 
   nav ul li {
     padding: 20px;
+  }
+
+  nav ul li a {
+    color: black;
   }
 
   button {
