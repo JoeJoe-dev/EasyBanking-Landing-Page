@@ -64,7 +64,248 @@ button {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 460px) {
+  html,
+  body {
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: whitesmoke;
+    margin: 0 30px 0 30px;
+    border-radius: 10px;
+    gap: 0;
+    overflow: hidden;
+    z-index: 60;
+  }
+
+  nav ul li {
+    padding: 20px;
+    color: black;
+  }
+
+  button {
+    display: none;
+  }
+
+  #hamburger-icon {
+    height: 20px;
+    display: block;
+  }
+
+  #menuList {
+    transition: all 0.5s;
+  }
+
+  /* HEADER */
+  header {
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .header-img {
+    position: relative;
+    z-index: 40;
+  }
+
+  .header-img-desktop {
+    display: none;
+  }
+
+  header .mobile-bg img {
+    width: 140%;
+    margin-left: -4rem;
+    margin-top: -12rem;
+  }
+
+  header .mobile-img {
+    position: absolute;
+    top: -9rem;
+    margin-left: rem;
+  }
+
+  header .mobile-img img {
+    width: 100%;
+  }
+
+  .desktop-bg {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  header p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    width: 90%;
+    margin-left: 1.2rem;
+  }
+
+  header .btn {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  header button {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1.3rem 2rem;
+  }
+
+  /* SECTION 1 */
+
+  .section-1,
+  .section-2 {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    gap: 4rem;
+    background: whitesmoke;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-top: 5rem;
+  }
+
+  .section-1 h1,
+  .section-2 h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .section-1 p {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .section-1 .icon-div,
+  .section-2 .icon-div {
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .section-1 .icon-div div,
+  .section-2 .icon-div div {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .section-1 .icon-div h2 {
+    text-align: center;
+    color: black;
+  }
+
+  .section-1 .icon-div div p {
+    color: gray;
+  }
+
+  .section-2 {
+    background: transparent;
+  }
+
+  .section-2 .icon-div h4 {
+    text-align: start;
+    margin-left: 2rem;
+    color: gray;
+    width: 65%;
+  }
+
+  .section-2 .icon-div h2 {
+    color: black;
+    text-align: start;
+    margin-left: 2rem;
+  }
+
+  .section-2 .icon-div p {
+    width: 85%;
+    text-align: start;
+    margin-left: 2rem;
+    color: gray;
+  }
+
+  .section-2 .icon-div img {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    background: hsl(233, 26%, 24%);
+    height: 55rem;
+    width: 100%;
+    color: white;
+    padding: 3rem 0 3rem 0;
+  }
+
+  .footer-logo img {
+    width: 12rem;
+  }
+
+  .footer-icons img {
+    width: 2rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+
+  footer ul {
+    font-size: 1.5rem;
+  }
+
+  footer ul li {
+    margin-top: 2rem;
+  }
+
+  footer .menu-list-1 {
+    margin-top: 4rem;
+  }
+
+  footer .btn-rights {
+    display: grid;
+    padding: 2rem 5rem 2rem 5rem;
+    text-align: center;
+  }
+
+  footer button {
+    margin: 10% 6%;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  footer button {
+    display: block;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    color: gray;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 800px) {
   html,
   body {
     position: relative;
@@ -116,16 +357,20 @@ button {
     z-index: 40;
   }
 
+  .header-img-desktop {
+    display: none;
+  }
+
   header .mobile-bg img {
     width: 140%;
     margin-left: -4rem;
-    margin-top: -17.7rem;
+    margin-top: -21rem;
   }
 
   header .mobile-img {
     position: absolute;
-    top: -13.5rem;
-    margin-left: rem;
+    top: -16rem;
+    /* margin-left: rem; */
   }
 
   header .mobile-img img {
@@ -137,21 +382,23 @@ button {
   }
 
   header h1 {
-    font-size: 2.6rem;
-    font-weight: 500;
+    font-size: 5rem;
+    font-weight: 300;
     text-align: center;
     margin-top: 1rem;
   }
 
   header p {
+    width: 100%;
     font-size: 2rem;
     text-align: center;
     margin-top: 3rem;
-    /* padding: 0 0.5rem 0 0.5rem; */
+    margin-left: 0rem;
+    padding: 0 2rem 0 2rem;
   }
 
   header .btn {
-    margin-top: 2rem;
+    margin-top: 4rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -165,7 +412,8 @@ button {
 
   /* SECTION 1 */
 
-  .section-1, .section-2 {
+  .section-1,
+  .section-2 {
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 100%;
@@ -176,7 +424,8 @@ button {
     margin-top: 5rem;
   }
 
-  .section-1 h1, .section-2 h1 {
+  .section-1 h1,
+  .section-2 h1 {
     font-size: 3rem;
     font-weight: 300;
     text-align: center;
@@ -185,16 +434,21 @@ button {
   .section-1 p {
     text-align: center;
     font-size: 1.3rem;
+    width: 100%;
+    margin-left: 0rem;
+    padding: 0 5rem 0 5rem;
   }
 
-  .section-1 .icon-div, .section-2 .icon-div {
+  .section-1 .icon-div,
+  .section-2 .icon-div {
     display: grid;
     grid-template-columns: 90%;
     justify-content: center;
     gap: 4rem;
   }
 
-  .section-1 .icon-div div, .section-2 .icon-div div {
+  .section-1 .icon-div div,
+  .section-2 .icon-div div {
     display: grid;
     justify-content: center;
     text-align: center;
@@ -204,17 +458,23 @@ button {
   .section-1 .icon-div h2 {
     text-align: center;
     color: black;
+    width: 100%;
+    margin-left: 0rem;
+    padding: 0 5rem 0 5rem;
   }
 
   .section-1 .icon-div div p {
     color: gray;
   }
 
-  .section-2 .icon-div h4, h2, p {
+  .section-2 .icon-div h4,
+  h2,
+  p {
     text-align: start;
     margin-left: 5rem;
     color: gray;
     width: 65%;
+    padding: 0 0 0 5rem;
   }
 
   .section-2 .icon-div h2 {
@@ -224,16 +484,326 @@ button {
   .section-2 .icon-div img {
     width: 35rem;
     height: 20rem;
+    padding: 0 3rem 0 3rem;
   }
 
+  /* FOOTER */
+  footer {
+    text-align: center;
+    background: hsl(233, 26%, 24%);
+    height: 57rem;
+    width: 100%;
+    color: white;
+    padding: 3rem 0 3rem 0;
+    margin-top: 4rem;
+  }
 
+  .footer-logo img {
+    width: 12rem;
+  }
 
+  .footer-icons img {
+    width: 2rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
 
+  footer ul {
+    font-size: 1.5rem;
+  }
+
+  footer ul li {
+    margin-top: 2rem;
+  }
+
+  footer .menu-list-1 {
+    margin-top: 4rem;
+  }
+
+  footer .btn-rights {
+    display: grid;
+    padding: 2rem 5rem 2rem 5rem;
+    text-align: center;
+  }
+
+  footer button {
+    margin: 10% 21%;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  footer button {
+    display: block;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    color: gray;
+    /* background: goldenrod; */
+    width: 100%;
+    margin-left: 0rem;
+    text-align: center;
+    padding-left: 0;
+  }
 }
 
-/* 
+@media (min-width: 800px) {
+  html,
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
 
+  nav {
+    background: white;
+    width: 100%;
+    z-index: 50;
+    padding-left: 7rem;
+  }
 
-footer {
-  background: hsl(233, 26%, 24%);
-} */
+  nav ul li {
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul li:hover {
+    border-bottom: 3px solid green;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  button:hover {
+    background: linear-gradient(
+      to left,
+      hsl(192, 70%, 70%),
+      hsl(136, 65%, 70%)
+    );
+    transition: all 1s;
+    cursor: pointer;
+  }
+
+  #hamburger-icon {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    position: relative;
+    grid-template-columns: 48% 52%;
+    grid-template-rows: auto;
+    gap: px;
+    height: 80vh;
+    width: 100%;
+  }
+
+  .header-img {
+    display: none;
+  }
+
+  header .mobile-bg {
+    display: none;
+  }
+
+  header .desktop-bg {
+    width: 100%;
+    margin-top: -13.5rem;
+  }
+
+  header .desktop-bg img {
+    height: 54rem;
+  }
+
+  header .mobile-img {
+    position: absolute;
+    top: -7rem;
+    right: -7rem;
+    z-index: 30;
+  }
+
+  header .mobile-img img {
+    width: 40rem;
+    height: 55rem;
+  }
+
+  header .header-text {
+    padding: 23% 16%;
+  }
+
+  .header-text h1 {
+    font-weight: 300;
+    font-size: 3rem;
+  }
+
+  .header-text p {
+    margin-top: 1.3rem;
+  }
+
+  .header-text button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  /* SECTION 1 */
+  .section-1 {
+    margin-top: 5.5rem;
+    background: whitesmoke;
+    padding: 9rem 6rem;
+  }
+
+  .section-1 h1 {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  .section-1 p {
+    width: 65%;
+    margin-top: 1rem;
+  }
+
+  .section-1 .icon-div {
+    padding-right: 15rem;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 30% 30% 30% 30%;
+    gap: 1rem;
+  }
+
+  .section-1 .icon-div h2 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+
+  .section-1 .icon-div div p {
+    width: 100%;
+    color: gray;
+  }
+
+  /* SECTION 2 */
+  .section-2 {
+    margin-top: 5.5rem;
+    padding: 0em 6rem;
+  }
+
+  .section-2 h1 {
+    font-weight: 300;
+    font-size: 2.5em;
+  }
+
+  .section-2 .icon-div {
+    padding-right: 15rem;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 30% 30% 30% 30%;
+    gap: 1rem;
+  }
+
+  .section-2 .icon-div div {
+    background: whitesmoke;
+  }
+
+  .section-2 .icon-div img {
+    width: 100%;
+  }
+
+  .section-2 .icon-div img:nth-child(1) {
+    height: 10rem;
+  }
+
+  .section-2 .icon-div h4 {
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 1rem 1rem 0 1rem;
+    color: gray;
+  }
+
+  .section-2 .icon-div h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 2rem 0 1rem;
+  }
+
+  .section-2 .icon-div h2:hover {
+    color: green;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .section-2 .icon-div div p {
+    width: 100%;
+    color: gray;
+    padding: 1rem 2rem 2rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: hsl(233, 26%, 24%);
+    height: 17rem;
+    width: 100%;
+    color: white;
+    padding: 7rem 0 3rem 7rem;
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 20% 20% 20% 40%;
+  }
+
+  .footer-logo img {
+    width: 12rem;
+  }
+
+  .footer-icons img {
+    width: 1.5rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+
+  .footer-icons img:nth-child(1) {
+    margin-left: 0;
+  }
+
+  footer ul {
+    font-size: 1rem;
+    margin-top: -.7rem;
+    margin-left: 5rem;
+  }
+
+  footer ul li {
+    margin-top: 1rem;
+    list-style-type: none;
+  }
+
+  footer ul li:hover {
+    color: green;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  footer .btn-rights {
+    margin-top: -3em;
+  }
+
+  footer button {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 37%;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+    color: gray;
+    width: 100%;
+    margin-left: -1rem;
+    text-align: center;
+    padding-left: 0;
+  }
+}
